@@ -63,6 +63,7 @@ export default function Home() {
     <div className="main">
       <h1>Welcome to Blockbuster Game!</h1>
       <p>Flashblocks make Base 10x faster! Can you click faster than Flashblocks produced?</p>
+      <p>Click the &quot;Push&quot; button as many times as possible, you have 30 seconds.</p>
       <div className="timer">
         <p>Time remaining:</p>
         <p>{timeRemaining}s</p>
@@ -83,7 +84,7 @@ export default function Home() {
         <p>{counter3}</p>
       </div>
       <div className="buttons">
-        <button onClick={handleIncrementAndStart} className="start">Start</button>
+        <button onClick={handleIncrementAndStart} className="start">PUSH!</button>
         <button onClick={handleReset}>Reset</button>
       </div>
 
