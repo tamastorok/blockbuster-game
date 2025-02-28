@@ -85,8 +85,8 @@ export default function Home() {
       </div>
       <div className="buttons">
         <button onClick={handleIncrementAndStart} className="start">PUSH!</button>
-        <button onClick={handleReset}>Reset</button>
       </div>
+      <button onClick={handleReset}>Reset</button>
 
       {showModal && (
         <div className="modal">
