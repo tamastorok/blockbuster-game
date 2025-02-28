@@ -6,7 +6,7 @@ export default function Home() {
   const [counter2, setCounter2] = useState(0);
   const [counter3, setCounter3] = useState(0);
   const [running, setRunning] = useState(false);
-  const [timeRemaining, setTimeRemaining] = useState(60);
+  const [timeRemaining, setTimeRemaining] = useState(30);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function Home() {
     const timer3Timeout = setTimeout(() => {
       setRunning(false);
       setShowModal(true);
-    }, 60000);
+    }, 30000);
 
     return () => {
       clearInterval(timer1);
@@ -46,7 +46,7 @@ export default function Home() {
   const handleIncrementAndStart = () => {
     if (!running) {
       setRunning(true);
-      setTimeRemaining(60);
+      setTimeRemaining(30);
     }
     setCounter3((prev) => prev + 1);
   };
@@ -56,7 +56,7 @@ export default function Home() {
     setCounter2(0);
     setCounter3(0);
     setRunning(false);
-    setTimeRemaining(60);
+    setTimeRemaining(30);
   };
 
   return (
