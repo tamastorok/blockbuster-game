@@ -99,7 +99,14 @@ export default function Home() {
             <p className="modal-text">Your clicks: {counter3}</p>
             <p style={{ textDecoration: 'underline' }}>Read more about Flashblocks <a href="https://base.mirror.xyz/HwG1GQ5hoxz0OTOF_nQhNcVTk4Ae9cRIrcqVQ14N4-c" target="_blank" rel="noopener noreferrer">here</a>.</p>
             <br />
-            <button onClick={() => setShowModal(false)}>Close</button>
+            <button onClick={() => {
+              setShowModal(false);
+              setCounter1(0);
+              setCounter2(0);
+              setCounter3(0);
+              setRunning(false);
+              setTimeRemaining(30);
+            }}>Close</button>
           </div>
         </div>
       )}
