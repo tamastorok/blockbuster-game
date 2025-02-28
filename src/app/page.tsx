@@ -7,7 +7,7 @@ export default function Home() {
   const [counter3, setCounter3] = useState(0);
   const [running, setRunning] = useState(false);
   const [timeRemaining, setTimeRemaining] = useState(60);
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     if (!running) return;
@@ -56,13 +56,13 @@ export default function Home() {
     setCounter2(0);
     setCounter3(0);
     setRunning(false);
+    setTimeRemaining(60);
   };
 
   return (
     <div className="main">
       <h1>Welcome to Blockbuster Game!</h1>
-      <h2>Can you beat Flashblocks?</h2>
-      <p>Flashblocks make Base 10x faster! You can try to be a human blockchain for 1 minute and generate as many blocks as possible.</p>
+      <p>Flashblocks make Base 10x faster! Can you click faster than Flashblocks produced?</p>
       <div className="timer">
         <p>Time remaining:</p>
         <p>{timeRemaining}s</p>
@@ -79,8 +79,7 @@ export default function Home() {
         <p>{counter2}</p>
       </div>
       <div className="counter">
-        <h2>Your human-powered blockchain</h2>
-        <p>Blocks produced:</p>
+        <h2>Your clicks</h2>
         <p>{counter3}</p>
       </div>
       <div className="buttons">
@@ -92,10 +91,11 @@ export default function Home() {
         <div className="modal">
           <div className="modal-content">
             <h2 className="modal-title">Time&apos;s up!</h2>
+            <h4 className="modal-subtitle">You might have won, but check out how much faster Flashblocks are compared to Base&apos;s 2-second block time!</h4>
             <p className="modal-text">Blocks produced:</p>
             <p className="modal-text">Base(2s): {counter1}</p>
             <p className="modal-text">Base (Flashblocks): {counter2}</p>
-            <p className="modal-text">Your blocks: {counter3}</p>
+            <p className="modal-text">Your clicks: {counter3}</p>
             <p style={{ textDecoration: 'underline' }}>Read more about Flashblocks <a href="https://base.mirror.xyz/HwG1GQ5hoxz0OTOF_nQhNcVTk4Ae9cRIrcqVQ14N4-c" target="_blank" rel="noopener noreferrer">here</a>.</p>
             <br />
             <button onClick={() => setShowModal(false)}>Close</button>

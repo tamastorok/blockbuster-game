@@ -94,6 +94,10 @@ button {
   text-align: center;
 }
 
+.modal-subtitle {
+  margin-bottom: 20px;
+}
+
 .modal-title {
   margin-bottom: 10px;
 }
